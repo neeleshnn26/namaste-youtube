@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# (React.StrictMode)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<React.StrictMode> is a wrapper component in React that helps you identify potential problems in your application. It doesn't render any visible UI but activates additional checks and warnings for its child components during development.
 
-## Available Scripts
+Here's what it does:
 
-In the project directory, you can run:
+- Identifies Unsafe Lifecycles: It helps catch unsafe lifecycle methods like componentWillMount, componentWillUpdate, and componentWillReceiveProps.
 
-### `npm start`
+- Warnings for Legacy API Usage: It gives warnings if you're using outdated React APIs.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Detects Side Effects: It runs certain functions (like useEffect) twice to help detect unexpected side effects.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Checks for Deprecated Methods: It warns you about deprecated methods that might be removed in future versions of React.
 
-### `npm test`
+- Strict Mode in Development Only: Note that <React.StrictMode> only affects development mode and doesn't impact the production build of your app.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+So, using <React.StrictMode> is a good practice while developing a React application to ensure code quality and future-proofing your code.
 
-### `npm run build`
+# reportWebVitals
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ reportWebVitals is a function used in React applications to measure and report the performance of your app by tracking key web vitals. Web vitals are metrics that measure various aspects of the user experience, such as loading time, interactivity, and visual stability.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+What are Web Vitals?
+Web vitals are a set of metrics that provide insights into the real-world user experience of your web application. The most important ones are:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Largest Contentful Paint (LCP): Measures loading performance. Ideally, it should occur within 2.5 seconds of when the page starts loading.
 
-### `npm run eject`
+- First Input Delay (FID): Measures interactivity. It should be less than 100 milliseconds.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Cumulative Layout Shift (CLS): Measures visual stability. Your pages should maintain a CLS of less than 0.1.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+These metrics help developers understand and optimize the performance of their web applications, which can directly impact user satisfaction and search engine rankings.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Why Use reportWebVitals?
+  - Performance Monitoring: It allows you to keep track of your app's performance over time.
+  - User Experience: By understanding these metrics, you can make data-driven decisions to improve the user experience.
+  - SEO: Search engines like Google use some of these metrics (like LCP and CLS) as ranking factors, so improving them can also benefit your site's SEO.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+# Debouncing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- 
